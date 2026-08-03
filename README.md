@@ -400,11 +400,11 @@ This README reflects the repository's <code>main</code> branch at commit <code>5
 
 | File | Purpose |
 |:---:|:---:|
-| <code>AURA.py</code> | Complete training, evaluation, plotting, serialization, inspection, and prediction program |
-| <code>cto.pkl</code> | Trained cascaded-tanks model |
-| <code>ced.pkl</code> | Trained coupled-electric-drives multi-output model |
-| <code>do.pkl</code> | Trained dissolved-oxygen DAC model |
-| <code>pH.pkl</code> | Trained pH one-step prediction model |
+| <code>AURA.py</code> | AURA model full retraining pipe-line code to train model on other datasets or domains as per user's requirements  |
+| <code>cto.pkl</code> | Trained Cascaded Tanks with Overflow model |
+| <code>ced.pkl</code> | Trained Coupled Electric Drives model |
+| <code>do.pkl</code> | Trained Dissolved Oxygen model |
+| <code>pH.pkl</code> | Trained pH Neutralization model |
 | <code>AURA Neural Architecture.png</code> | Full architecture and cross-domain overview |
 | <code>Prototype.png</code> | Implemented sensing/control prototype |
 | <code>Field Testing.png</code> | Pond-side aeration field test |
