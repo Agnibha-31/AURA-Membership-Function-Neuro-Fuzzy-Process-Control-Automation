@@ -357,12 +357,7 @@ The lower part shows how the AURA premise is reused for dissolved oxygen, couple
 
 ## Repository contents
 
-The repository contains 91 tracked files in 24 directories.
-
-This README reflects the repository's <code>main</code> branch at commit <code>594f5dc6c39f1b991a4cd6bed95a47b62544b189</code> (3 August 2026).
-
 ~~~text
-.
 |-- AURA.py
 |-- AURA Neural Architecture.png
 |-- cto.pkl
@@ -372,28 +367,28 @@ This README reflects the repository's <code>main</code> branch at commit <code>5
 |-- Prototype.png
 |-- Field Testing.png
 |-- Cascaded Tanks with Overflow Datasets/
-|   |-- dataBenchmark.csv
-|   |-- dataBenchmark.mat
-|   -- TanksBenchmark.pdf
+    |-- dataBenchmark.csv
+    |-- dataBenchmark.mat
+    |-- TanksBenchmark.pdf
 |-- Cascaded Tanks with Overflow AURA Model Analysis/
-|   -- 01-04: comparison, operating-region, trajectory, and parity plots
+    |-- 01-04: comparison, operating-region, trajectory, and parity plots
 |-- Coupled Eletric Drives Datasets/
-|   |-- DATAPRBS.csv / DATAPRBS.MAT
-|   |-- DATAUNIF.csv / DATAUNIF.MAT
-|   -- Coupled Electric Drives Data Set and Reference Models.pdf
+    |-- DATAPRBS.csv / DATAPRBS.MAT
+    |-- DATAUNIF.csv / DATAUNIF.MAT
+    |-- Coupled Electric Drives Data Set and Reference Models.pdf
 |-- Coupled Electric Drives AURA Model Analysis/
-|   -- 05-08: comparison, trajectory, parity, and rule-usage plots
+    |-- 05-08: comparison, trajectory, parity, and rule-usage plots
 |-- Dissolved Oxygen Datasets/
-|   |-- Set 6/
-|   -- Set 7/
-|       -- Clean, Drift, Impulse, PLI, Quantization, Ripple, and WGN scenarios
+    |-- Set 6/
+    |-- Set 7/
+        |-- Clean, Drift, Impulse, PLI, Quantization, Ripple, and WGN scenarios
 |-- Dissolved Oxygen AURA Model Analysis/
-|   -- 09-12: fair comparison, fidelity, controller, and learned-MF plots
+    |-- 09-12: fair comparison, fidelity, controller, and learned-MF plots
 |-- pH Datasets/
-|   |-- pHdata.xlsx
-|   -- pH description.txt
--- pH Neutralization AURA Model Analysis/
-    -- 13-16: comparison, trajectory, parity, and residual plots
+    |-- pHdata.xlsx
+    |-- pH description.txt
+|-- pH Neutralization AURA Model Analysis/
+    |-- 13-16: comparison, trajectory, parity, and residual plots
 ~~~
 
 ### Main files
