@@ -1,5 +1,5 @@
 # AURA Membership Function for Neuro-Fuzzy Process Control Automation and Nonlinear Dynamic Modeling
-[![DOI](https://zenodo.org/badge/1320238004.svg)(https://doi.org/10.5281/zenodo.21775326
+[![DOI](https://zenodo.org/badge/1320238004.svg)](https://doi.org/10.5281/zenodo.21775326)
 
 
 
