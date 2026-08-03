@@ -1,6 +1,7 @@
 # AURA Membership Function for Neuro-Fuzzy Process Control Automation and Nonlinear Dynamic Modeling
 [![DOI](https://zenodo.org/badge/1320238004.svg)](https://doi.org/10.5281/zenodo.21775326)
-
+<a href="https://doi.org/10.5281/zenodo.21775326"><img src="https://zenodo.org/badge/1320238004.svg" alt="DOI"></a>
+https://zenodo.org/badge/1320238004.svg
 
 **AURA (Asymmetric Unified Relativistic Attractor)** is an asymmetric, center-anchored fuzzy membership function and a reusable neuro-fuzzy modeling pipeline for regression, time-series prediction, system identification, and process-control research.
 
