@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+
+# Copyright 2026 Agnibha Basak
+# SPDX-License-Identifier: Apache-2.0
+
 """
 AURA [Asymmetric Unified Relativistic Attractor]
 ============
