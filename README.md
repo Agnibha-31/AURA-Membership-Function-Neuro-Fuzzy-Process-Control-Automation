@@ -29,24 +29,23 @@ The repository consolidates the model definition, training workflow, domain data
 1. [Project overview](#project-overview)
 2. [What problem does AURA solve?](#what-problem-does-aura-solve)
 3. [AURA in very simple language](#aura-in-very-simple-language)
-4. [Mathematical definition](#mathematical-definition)
-5. [How the unified AURA pipeline works](#how-the-unified-aura-pipeline-works)
-6. [Neural architecture](#neural-architecture)
-7. [Repository contents](#repository-contents)
-8. [Installation](#installation)
-9. [Quick start](#quick-start)
-10. [Using the trained models](#using-the-trained-models)
-11. [Trained-model schemas and metrics](#trained-model-schemas-and-metrics)
-12. [Training AURA on a new dataset](#training-aura-on-a-new-dataset)
-13. [Domain-specific retraining examples](#domain-specific-retraining-examples)
-14. [Datasets](#datasets)
-15. [Research results and inline plots](#research-results-and-inline-plots)
-16. [Prototype and field testing](#prototype-and-field-testing)
-17. [Evaluation metrics](#evaluation-metrics)
-18. [Reproducibility and fair evaluation](#reproducibility-and-fair-evaluation)
-19. [Troubleshooting](#troubleshooting)
-20. [Citation](#citation)
-21. [Contributing and contact](#contributing-and-contact)
+4. [How the unified AURA pipeline works](#how-the-unified-aura-pipeline-works)
+5. [Neural architecture](#neural-architecture)
+6. [Repository contents](#repository-contents)
+7. [Installation](#installation)
+8. [Quick start](#quick-start)
+9. [Using the trained models](#using-the-trained-models)
+10. [Trained-model schemas and metrics](#trained-model-schemas-and-metrics)
+11. [Training AURA on a new dataset](#training-aura-on-a-new-dataset)
+12. [Domain-specific retraining examples](#domain-specific-retraining-examples)
+13. [Datasets](#datasets)
+14. [Research results and inline plots](#research-results-and-inline-plots)
+15. [Prototype and field testing](#prototype-and-field-testing)
+16. [Evaluation metrics](#evaluation-metrics)
+17. [Reproducibility and fair evaluation](#reproducibility-and-fair-evaluation)
+18. [Troubleshooting](#troubleshooting)
+19. [Citation](#citation)
+20. [Contributing and contact](#contributing-and-contact)
 
 ---
 
@@ -125,109 +124,6 @@ This gives a readable mixture-of-local-models interpretation:
 - **membership functions** decide where a rule is relevant;
 - **rule firing strengths** decide how much that rule contributes; and
 - **Takagi-Sugeno consequents** decide what that rule predicts.
-
----
-
-## Mathematical definition
-
-For input $x$, center $c$, positive width $a$, and fixed gate sharpness $\lambda$, AURA first forms a direction-sensitive normalized coordinate:
-
-$$
-u =
-\frac{x-c}
-{a\left[1+\rho\tanh\left(\lambda(x-c)\right)\right]}.
-$$
-
-The symmetric base energy and direction-dependent tail order are
-
-$$
-B(u)=\sqrt{1+u^2}-1+\eta\ln(1+u^2),
-$$
-
-$$
-q(u)=q_0+q_1\tanh(\lambda u).
-$$
-
-A bounded skew factor is
-
-$$
-S(u)=
-1+
-\frac{\beta u}{\sqrt{1+u^2}}+
-\frac{\zeta u^3}{(1+u^2)^{3/2}}.
-$$
-
-The total nonnegative energy is
-
-$$
-E(u)=\max\left(B(u)^{q(u)}S(u),0\right).
-$$
-
-Finally, the AURA membership degree is
-
-```math
-\displaystyle
-\mu_{\mathrm{AURA}}(x)
-=
-\left[
-\frac{
-\tan^{-1}\!\left(
-\left[
-\left(
-\sqrt{1+u^{2}}
--1
-+\eta\ln\!\left(1+u^{2}\right)
-\right)^{
-q_{0}+q_{1}\tanh\!\left(\lambda u\right)
-}
-\left(
-1
-+\frac{\beta u}{\sqrt{1+u^{2}}}
-+\frac{\zeta u^{3}}{\left(1+u^{2}\right)^{3/2}}
-\right)
-+\varepsilon
-\right]^{-1}
-\right)
-}{
-\tan^{-1}\!\left(\varepsilon^{-1}\right)
-}
-\right]^{\alpha}
-```
-
-where $\varepsilon$ is a small numerical constant.
-
-At $x=c$, $u=0$, $E(0)=0$, and therefore $\mu_{\mathrm{AURA}}(c)=1$. This is the center-anchor property.
-
-### Meaning of the AURA parameters
-
-| Parameter | Plain-language role |
-|:---:|:---:|
-| $c$ | Center of the membership function |
-| $a$ | Basic width or horizontal scale |
-| $\rho$ | Direction-sensitive width asymmetry |
-| $\eta$ | Adds a logarithmic component to the base energy |
-| $q_0$ | Central tail-order term |
-| $q_1$ | Difference between left and right tail order |
-| $\beta$ | First bounded skew component |
-| $\zeta$ | Higher-order bounded skew component |
-| $\alpha$ | Final sharpness or concentration control |
-| $\lambda$ | Fixed transition-gate sharpness; set to 2.0 in <code>AURA.py</code> |
-
-The implementation learns nine premise terms per rule and encoded input: $c$, $a$, $\rho$, $\eta$, $q_0$, $q_1$, $\beta$, $\zeta$, and $\alpha$. The gate $\lambda$ is fixed.
-
-### Feasibility constraints used by the code
-
-The trainable variables are transformed so that invalid shapes are not produced:
-
-- $a>0$;
-- $|\rho|<1$, with an implementation bound of 0.85;
-- $\eta\ge 0$;
-- $q_0-|q_1|>1$, with a construction margin beginning at 1.05;
-- $|q_1|\le 1.20$;
-- $|\beta|+|\zeta|<1$, with an implementation bound of 0.85; and
-- $\alpha>0.05$ in the implementation.
-
-These conditions keep the directional width positive, preserve valid tail decay, protect the skew factor, and improve numerical stability.
 
 ---
 
