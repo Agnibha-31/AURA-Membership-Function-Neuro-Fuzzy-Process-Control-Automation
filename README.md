@@ -1,7 +1,9 @@
 # AURA Membership Function for Neuro-Fuzzy Process Control Automation and Nonlinear Dynamic Modeling
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21775327.svg)](https://doi.org/10.5281/zenodo.21775327)
-
+[![Code License: Apache 2.0](https://img.shields.io/badge/Code%20License-Apache%202.0-blue.svg)](./LICENSE)
+[![DO Data License: CC BY 4.0](https://img.shields.io/badge/DO%20Data%20License-CC%20BY%204.0-brightgreen.svg)](./DATA_LICENSE.md)
+[![Third-Party Materials](https://img.shields.io/badge/Third--Party%20Materials-Original%20Terms-lightgrey.svg)](./THIRD_PARTY_NOTICES.md)
 
 
 **AURA (Asymmetric Unified Relativistic Attractor)** is an asymmetric, center-anchored fuzzy membership function and a reusable neuro-fuzzy modeling pipeline for regression, time-series prediction, system identification, and process-control research.
@@ -45,7 +47,8 @@ The repository consolidates the model definition, training workflow, domain data
 17. [Reproducibility and fair evaluation](#reproducibility-and-fair-evaluation)
 18. [Troubleshooting](#troubleshooting)
 19. [Citation](#citation)
-20. [Contributing and contact](#contributing-and-contact)
+20. [Licensing and permitted reuse](#licensing-and-permitted-reuse)
+21. [Contributing and contact](#contributing-and-contact)
 
 ---
 
@@ -1106,6 +1109,27 @@ The original benchmark sources should also be cited when their datasets are used
 
 ---
 
+## Licensing and permitted reuse
+
+This repository uses a clear, material-specific licensing structure so that software, original research data, project-created media, and externally sourced benchmark materials are handled appropriately.
+
+| Material | Terms | Details |
+|:---|:---|:---|
+| Original AURA software and project-authored software/model implementation | **Apache License 2.0** | See [`LICENSE`](LICENSE) |
+| Original dissolved-oxygen datasets in `Dissolved Oxygen Datasets/` | **Creative Commons Attribution 4.0 International** | See [`DATA_LICENSE.md`](DATA_LICENSE.md) |
+| Original project-authored documentation, architecture artwork, photographs, and plots, to the extent owned by the project | **Creative Commons Attribution 4.0 International** | See [`DATA_LICENSE.md`](DATA_LICENSE.md) |
+| Cascaded-tanks benchmark materials | Original provider terms, including the applicable dataset licence and citation requirements | See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) |
+| Coupled-electric-drives and pH benchmark materials | Original provider terms and attribution requirements | See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) |
+
+The repository licences apply only to rights held by the project copyright owner. They do not replace, override, or relicense any third-party dataset, publication, trademark, or other externally sourced material.
+
+When reusing the original dissolved-oxygen dataset, please provide attribution similar to:
+
+> Agnibha Basak (2026), “AURA Dissolved Oxygen Process-Control Dataset,” in *AURA Membership Function for Neuro-Fuzzy Process Control Automation and Nonlinear Dynamic Modeling*, licensed under CC BY 4.0, https://github.com/Agnibha-31/AURA-Membership-Function-Neuro-Fuzzy-Process-Control-Automation
+
+Academic users are also encouraged to cite the repository DOI and the relevant original benchmark source listed in the [Citation](#citation) section.
+
+---
 ## Contribution
 
 Technical discussions, model extensions, new-domain experiments, and documentation improvements are coordinated through GitHub Issues. 
