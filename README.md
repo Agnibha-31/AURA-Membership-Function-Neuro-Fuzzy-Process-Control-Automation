@@ -48,7 +48,7 @@ The repository consolidates the model definition, training workflow, domain data
 18. [Troubleshooting](#troubleshooting)
 19. [Citation](#citation)
 20. [Licensing and permitted reuse](#licensing-and-permitted-reuse)
-21. [Contributing and contact](#contributing-and-contact)
+21. [Contribution](#Contribution)
 
 ---
 
