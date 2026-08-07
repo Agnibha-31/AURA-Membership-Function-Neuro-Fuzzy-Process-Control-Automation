@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21775327.svg)](https://doi.org/10.5281/zenodo.21775327)
 [![Code License: Apache 2.0](https://img.shields.io/badge/Code%20License-Apache%202.0-blue.svg)](./LICENSE)
-[![DO Data License: CC BY 4.0](https://img.shields.io/badge/DO%20Data%20License-CC%20BY%204.0-brightgreen.svg)](./DATA_LICENSE.md)
+[![DO Data License: CC BY 4.0](https://img.shields.io/badge/DO%20Data%20License-CC%20BY%204.0-brightgreen.svg)](./LICENSE-DATA)
 [![Third-Party Materials](https://img.shields.io/badge/Third--Party%20Materials-Original%20Terms-lightgrey.svg)](./THIRD_PARTY_NOTICES.md)
 
 
@@ -1111,15 +1111,17 @@ The original benchmark sources should also be cited when their datasets are used
 
 ## Licensing and permitted reuse
 
-This repository uses a clear, material-specific licensing structure so that software, original research data, project-created media, and externally sourced benchmark materials are handled appropriately.
+This repository uses a material-specific licensing structure so that project software, original research data, project-created media, and externally sourced benchmark materials are governed appropriately.
 
-| Material | Terms | Details |
-|:---|:---|:---|
+| Material | Governing terms | License scope and details |
+| :--- | :--- | :--- |
 | Original AURA software and project-authored software/model implementation | **Apache License 2.0** | See [`LICENSE`](LICENSE) |
-| Original dissolved-oxygen datasets in `Dissolved Oxygen Datasets/` | **Creative Commons Attribution 4.0 International** | See [`DATA_LICENSE.md`](DATA_LICENSE.md) |
-| Original project-authored documentation, architecture artwork, photographs, and plots, to the extent owned by the project | **Creative Commons Attribution 4.0 International** | See [`DATA_LICENSE.md`](DATA_LICENSE.md) |
-| Cascaded-tanks benchmark materials | Original provider terms, including the applicable dataset licence and citation requirements | See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) |
+| Original dissolved-oxygen datasets in `Dissolved Oxygen Datasets/` | **Creative Commons Attribution 4.0 International** | See [`LICENSE-DATA`](LICENSE-DATA) for the governing terms and [`DATA_SCOPE.md`](DATA_SCOPE.md) for the covered material and attribution requirements |
+| Original project-authored documentation, architecture artwork, photographs, and plots, to the extent owned by the project | **Creative Commons Attribution 4.0 International** | See [`LICENSE-DATA`](LICENSE-DATA) for the governing terms and [`DATA_SCOPE.md`](DATA_SCOPE.md) for the covered material, exclusions, and attribution requirements |
+| Cascaded-tanks benchmark materials | Original provider terms, including applicable dataset-licence and citation requirements | See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) |
 | Coupled-electric-drives and pH benchmark materials | Original provider terms and attribution requirements | See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) |
+
+The Apache 2.0 and CC BY 4.0 licenses apply only to material and rights owned by, or validly licensable by, the project copyright holder. They do not replace, override, or relicense any third-party dataset, publication, software, image, trademark, or other externally sourced material.
 
 The repository licences apply only to rights held by the project copyright owner. They do not replace, override, or relicense any third-party dataset, publication, trademark, or other externally sourced material.
 
