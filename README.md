@@ -1123,8 +1123,6 @@ This repository uses a material-specific licensing structure so that project sof
 
 The Apache 2.0 and CC BY 4.0 licenses apply only to material and rights owned by, or validly licensable by, the project copyright holder. They do not replace, override, or relicense any third-party dataset, publication, software, image, trademark, or other externally sourced material.
 
-The repository licences apply only to rights held by the project copyright owner. They do not replace, override, or relicense any third-party dataset, publication, trademark, or other externally sourced material.
-
 When reusing the original dissolved-oxygen dataset, please provide attribution similar to:
 
 > Agnibha Basak (2026), “AURA Dissolved Oxygen Process-Control Dataset,” in *AURA Membership Function for Neuro-Fuzzy Process Control Automation and Nonlinear Dynamic Modeling*, licensed under CC BY 4.0, https://github.com/Agnibha-31/AURA-Membership-Function-Neuro-Fuzzy-Process-Control-Automation
